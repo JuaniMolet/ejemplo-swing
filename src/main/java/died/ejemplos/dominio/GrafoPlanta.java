@@ -17,14 +17,16 @@ public class GrafoPlanta extends Grafo<Planta> {
 		Planta p5 = new Planta(5, "Planta 5");
 		Planta p6 = new Planta(6, "Planta 6");
 		
-		LocalTime ahora = LocalTime.now();
-		Ruta r1 = new Ruta(1, p1, p2, 50.0, ahora, 100.0);
+		Ruta r1 = new Ruta(1, p1, p2, 50.0, 10.0, 100.0);
+		Ruta r2 = new Ruta(2, p2, p3, 10.0, 2.0, 100.0);
+		Ruta r3 = new Ruta(3, p4, p6, 240.0, 50.0, 100.0);
+		Ruta r4 = new Ruta(4, p5, p3, 60.0, 12.0, 100.0);
 		
 		gp.addNodo(p1);
 		gp.addNodo(p2);
-		gp.conectar(p1, p2, r1);
+		gp.conectar(p1, p2);
 		
-		System.out.println(gp.getAristas());
+		System.out.println(gp.getAdyacentes(p1));
 		
 	}
 }

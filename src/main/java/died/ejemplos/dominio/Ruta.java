@@ -9,7 +9,7 @@ public class Ruta extends Arista<Planta>{
 
 	private Integer numero;
 	private Double distancia;
-	private LocalTime horas;
+	private Double horas;
 
 	
 	//CONSTRUCTORES.
@@ -17,7 +17,7 @@ public class Ruta extends Arista<Planta>{
 		super();
 		this.numero = numero;
 	}
-	public Ruta(Integer numero, Planta origen, Planta destino, Double distancia, LocalTime horas, Double pesoMaximo) {
+	public Ruta(Integer numero, Planta origen, Planta destino, Double distancia, Double horas, Double pesoMaximo) {
 		super(origen, destino, pesoMaximo);
 		this.numero = numero;
 		this.distancia = distancia;
@@ -51,10 +51,10 @@ public class Ruta extends Arista<Planta>{
 	public void setDistancia(Double distancia) {
 		this.distancia = distancia;
 	}
-	public LocalTime getHoras() {
+	public Double getHoras() {
 		return horas;
 	}
-	public void setHoras(LocalTime horas) {
+	public void setHoras(Double horas) {
 		this.horas = horas;
 	}
 	public Double getPesoMaximo() {
